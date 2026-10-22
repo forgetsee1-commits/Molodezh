@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Культура: темная сцена и теплые круги">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#233b2f"/>
+      <stop offset="1" stop-color="#14261d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#e0b58e" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#e0b58e" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <circle cx="880" cy="330" r="300" fill="url(#glow)"/>
+  <circle cx="880" cy="330" r="142" fill="#d19a75"/>
+  <g fill="none" stroke="#e9d9c4" stroke-width="1.5" opacity="0.5">
+    <path d="M560 900c0-160 142-290 318-290s318 130 318 290"/>
+    <path d="M620 900c0-142 116-258 258-258s258 116 258 258"/>
+    <path d="M682 900c0-112 88-202 196-202s196 90 196 202"/>
+  </g>
+  <g fill="#e9d9c4" opacity="0.8">
+    <circle cx="142" cy="208" r="3"/>
+    <circle cx="196" cy="258" r="2"/>
+    <circle cx="262" cy="190" r="4"/>
+    <circle cx="330" cy="244" r="2"/>
+    <circle cx="398" cy="180" r="3"/>
+    <circle cx="150" cy="330" r="2"/>
+  </g>
+  <g fill="none" stroke="#d19a75" stroke-width="1.5" opacity="0.5">
+    <path d="M96 420h156M96 448h96M96 476h122"/>
+  </g>
+  <rect x="48" y="48" width="1104" height="804" fill="none" stroke="#f0e8da" stroke-width="1.5" opacity="0.16"/>
+  <text x="78" y="756" font-family="Georgia, serif" font-size="46" fill="#f4eee1" letter-spacing="2">КУЛЬТУРА</text>
+  <text x="78" y="800" font-family="Arial, sans-serif" font-size="17" fill="#cbbda9" letter-spacing="5">ГОРОД, КОТОРЫЙ ЗВУЧИТ</text>
+  <text x="1122" y="798" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#cbbda9" letter-spacing="3" opacity="0.7">МОЛОДЕЖЬ / 2026</text>
+  <rect width="1200" height="900" filter="url(#noise)" opacity="0.07" style="mix-blend-mode:screen"/>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Помощь: теплые линии и круг">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2e6d8"/>
+      <stop offset="1" stop-color="#e7d2bf"/>
+    </linearGradient>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <circle cx="842" cy="420" r="268" fill="#c67854"/>
+  <circle cx="842" cy="420" r="268" fill="none" stroke="#8f4a2e" stroke-width="1.5" opacity="0.35"/>
+  <g fill="none" stroke="#f7efe3" stroke-width="26" stroke-linecap="round" opacity="0.9">
+    <path d="M738 344c-46 42-68 92-62 148 5 48 32 86 78 110"/>
+    <path d="M940 328c52 38 80 88 78 146-2 52-28 92-76 118"/>
+  </g>
+  <g fill="none" stroke="#9a5133" stroke-width="2" opacity="0.55">
+    <path d="M132 676c92-10 166-48 222-114"/>
+    <path d="M132 712c112-8 200-52 264-132"/>
+    <path d="M132 748c130-8 232-60 306-156"/>
+  </g>
+  <g fill="#1f3a2d">
+    <circle cx="214" cy="270" r="6"/>
+    <circle cx="258" cy="238" r="3"/>
+    <circle cx="292" cy="286" r="4"/>
+    <circle cx="178" cy="316" r="3"/>
+  </g>
+  <rect x="48" y="48" width="1104" height="804" fill="none" stroke="#1f3a2d" stroke-width="1.5" opacity="0.16"/>
+  <text x="78" y="756" font-family="Georgia, serif" font-size="46" fill="#1f3a2d" letter-spacing="2">ПОМОЩЬ</text>
+  <text x="78" y="800" font-family="Arial, sans-serif" font-size="17" fill="#5f4a3d" letter-spacing="5">РЯДОМ — ЗНАЧИТ ВОВРЕМЯ</text>
+  <text x="1122" y="798" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#5f4a3d" letter-spacing="3" opacity="0.7">МОЛОДЕЖЬ / 2026</text>
+  <rect width="1200" height="900" filter="url(#noise)" opacity="0.055" style="mix-blend-mode:multiply"/>
+</svg>

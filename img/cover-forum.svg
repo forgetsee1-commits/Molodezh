@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Форум: сцена и люди">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#dfe6dc"/>
+      <stop offset="1" stop-color="#c4d1c5"/>
+    </linearGradient>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <path d="M0 640c210-86 402-64 600 4 208 72 400 58 600-22v278H0Z" fill="#a8bba6" opacity="0.7"/>
+  <g>
+    <rect x="330" y="230" width="540" height="310" rx="6" fill="#1f3a2d"/>
+    <rect x="354" y="254" width="492" height="262" rx="2" fill="#2c4c3b"/>
+    <circle cx="600" cy="368" r="54" fill="#d9a48a"/>
+    <path d="M536 456c0-38 29-68 64-68s64 30 64 68" fill="#d9a48a"/>
+    <path d="M512 230v310M688 230v310" stroke="#1f3a2d" stroke-width="2" opacity="0.5"/>
+  </g>
+  <g fill="#1f3a2d">
+    <circle cx="210" cy="660" r="30"/>
+    <path d="M162 748c0-30 21-54 48-54s48 24 48 54Z"/>
+    <circle cx="322" cy="704" r="26"/>
+    <path d="M281 780c0-26 18-46 41-46s41 20 41 46Z"/>
+    <circle cx="878" cy="704" r="26"/>
+    <path d="M837 780c0-26 18-46 41-46s41 20 41 46Z"/>
+    <circle cx="990" cy="660" r="30"/>
+    <path d="M942 748c0-30 21-54 48-54s48 24 48 54Z"/>
+  </g>
+  <g fill="none" stroke="#1f3a2d" stroke-width="1.5" opacity="0.3">
+    <path d="M120 160h180M120 190h120M900 170h180M960 200h120"/>
+  </g>
+  <rect x="48" y="48" width="1104" height="804" fill="none" stroke="#1f3a2d" stroke-width="1.5" opacity="0.16"/>
+  <text x="78" y="756" font-family="Georgia, serif" font-size="46" fill="#f2eee2" letter-spacing="2">ФОРУМ</text>
+  <text x="78" y="800" font-family="Arial, sans-serif" font-size="17" fill="#eef0e4" letter-spacing="5">ВМЕСТЕ — БОЛЬШЕ, ЧЕМ КАЖЕТСЯ</text>
+  <text x="1122" y="798" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#eef0e4" letter-spacing="3" opacity="0.7">МОЛОДЕЖЬ / 2026</text>
+  <rect width="1200" height="900" filter="url(#noise)" opacity="0.055" style="mix-blend-mode:multiply"/>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Образование: книги и сетка">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#e2e8e3"/>
+      <stop offset="1" stop-color="#ccd8d2"/>
+    </linearGradient>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <g stroke="#1f3a2d" stroke-width="1" opacity="0.13">
+    <path d="M0 150h1200M0 300h1200M0 450h1200M0 600h1200M0 750h1200"/>
+    <path d="M150 0v900M300 0v900M450 0v900M600 0v900M750 0v900M900 0v900M1050 0v900"/>
+  </g>
+  <g>
+    <rect x="676" y="282" width="316" height="58" rx="4" fill="#b76543"/>
+    <rect x="700" y="340" width="292" height="58" rx="4" fill="#d9a48a"/>
+    <rect x="658" y="398" width="334" height="58" rx="4" fill="#1f3a2d"/>
+    <rect x="692" y="456" width="300" height="58" rx="4" fill="#93a992"/>
+    <rect x="676" y="514" width="316" height="58" rx="4" fill="#e7dcc7"/>
+    <path d="M670 576h330" stroke="#1f3a2d" stroke-width="1.5" opacity="0.35"/>
+  </g>
+  <circle cx="270" cy="330" r="86" fill="none" stroke="#1f3a2d" stroke-width="1.5" opacity="0.5"/>
+  <circle cx="270" cy="330" r="44" fill="#b76543" opacity="0.9"/>
+  <g fill="none" stroke="#1f3a2d" stroke-width="1.5" opacity="0.4">
+    <path d="M130 560c74-54 158-64 252-30"/>
+    <path d="M130 590c90-58 184-64 282-18"/>
+    <path d="M130 620c104-58 210-58 318-4"/>
+  </g>
+  <rect x="48" y="48" width="1104" height="804" fill="none" stroke="#1f3a2d" stroke-width="1.5" opacity="0.16"/>
+  <text x="78" y="756" font-family="Georgia, serif" font-size="46" fill="#1f3a2d" letter-spacing="2">ОБРАЗОВАНИЕ</text>
+  <text x="78" y="800" font-family="Arial, sans-serif" font-size="17" fill="#41564a" letter-spacing="5">УЧИМСЯ ДЕЛАТЬ ДОБРО</text>
+  <text x="1122" y="798" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#41564a" letter-spacing="3" opacity="0.7">МОЛОДЕЖЬ / 2026</text>
+  <rect width="1200" height="900" filter="url(#noise)" opacity="0.055" style="mix-blend-mode:multiply"/>
+</svg>

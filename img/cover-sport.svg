@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Спорт: беговые дорожки и мяч">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0eadc"/>
+      <stop offset="1" stop-color="#e2d9c6"/>
+    </linearGradient>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <g fill="none" stroke="#1f3a2d" stroke-width="2" opacity="0.5">
+    <path d="M-40 780c240-170 500-206 780-108 190 68 350 56 500-22"/>
+    <path d="M-40 832c260-176 530-206 810-104 184 66 340 58 470-12"/>
+    <path d="M-40 884c280-180 560-206 840-100 176 62 326 58 440 6"/>
+  </g>
+  <g fill="none" stroke="#b76543" stroke-width="1.5" opacity="0.55">
+    <path d="M-40 726c240-164 500-194 780-96 190 66 350 54 500-24"/>
+  </g>
+  <circle cx="864" cy="342" r="168" fill="#b76543"/>
+  <circle cx="864" cy="342" r="168" fill="none" stroke="#8d4a2e" stroke-width="1.5" opacity="0.4"/>
+  <path d="M720 288c96 40 190 40 288 0M696 396c112 44 224 44 336 0M864 174c-44 104-44 230 0 336" fill="none" stroke="#f4e8d9" stroke-width="2" opacity="0.65"/>
+  <g fill="#1f3a2d" opacity="0.8">
+    <circle cx="188" cy="240" r="4"/>
+    <circle cx="240" cy="206" r="2.5"/>
+    <circle cx="294" cy="258" r="3"/>
+    <circle cx="352" cy="214" r="2"/>
+  </g>
+  <rect x="48" y="48" width="1104" height="804" fill="none" stroke="#1f3a2d" stroke-width="1.5" opacity="0.16"/>
+  <text x="78" y="756" font-family="Georgia, serif" font-size="46" fill="#1f3a2d" letter-spacing="2">СПОРТ</text>
+  <text x="78" y="800" font-family="Arial, sans-serif" font-size="17" fill="#4e5747" letter-spacing="5">ДВИЖЕНИЕ, КОТОРОЕ ОБЪЕДИНЯЕТ</text>
+  <text x="1122" y="798" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#4e5747" letter-spacing="3" opacity="0.7">МОЛОДЕЖЬ / 2026</text>
+  <rect width="1200" height="900" filter="url(#noise)" opacity="0.055" style="mix-blend-mode:multiply"/>
+</svg>

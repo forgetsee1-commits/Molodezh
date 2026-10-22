@@ -1,0 +1,1223 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Отдел по работе с молодежью</title>
+<meta name="description" content="Отдел по работе с молодежью: волонтерские направления, городские события и проекты. Присоединяйтесь — поможем начать.">
+<meta name="theme-color" content="#1f3a2d">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Отдел по работе с молодежью">
+<meta property="og:description" content="Волонтерские направления, городские события и проекты.">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f4f1e9;
+    --paper-2: #ece7db;
+    --cream: #fbf8f1;
+    --ink: #1b2a22;
+    --ink-2: #35443b;
+    --muted: #6f7a70;
+    --line: rgba(27, 42, 34, 0.12);
+    --line-2: rgba(27, 42, 34, 0.22);
+    --forest: #1f3a2d;
+    --forest-2: #2c4c3b;
+    --sage: #d5ddcf;
+    --clay: #b76543;
+    --clay-dark: #9a5133;
+    --clay-soft: #f0dfd4;
+    --serif: "Lora", Georgia, "Times New Roman", serif;
+    --sans: "Golos Text", "Segoe UI", system-ui, sans-serif;
+    --r: 16px;
+    --shadow: 0 24px 60px -32px rgba(27, 42, 34, 0.42);
+    --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; overflow-x: clip; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+
+  img, svg, video { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  h1, h2, h3, p { margin: 0; }
+  ul { margin: 0; padding: 0; list-style: none; }
+
+  ::selection { background: var(--clay-soft); }
+  :focus-visible { outline: 2px solid var(--clay); outline-offset: 3px; }
+
+  .shell { width: min(1160px, calc(100% - 56px)); margin-inline: auto; }
+
+  .eyebrow {
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ---------- кнопки ---------- */
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 46px;
+    padding: 0 20px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    background: var(--forest);
+    color: var(--cream);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1;
+    transition: background 0.25s var(--ease), color 0.25s var(--ease), border-color 0.25s, transform 0.25s var(--ease);
+    white-space: nowrap;
+  }
+
+  .btn svg { width: 17px; height: 17px; flex: none; }
+  .btn:hover { transform: translateY(-1px); background: var(--forest-2); }
+  .btn:active { transform: none; }
+
+  .btn--clay { background: var(--clay); color: #fffaf4; }
+  .btn--clay:hover { background: var(--clay-dark); }
+
+  .btn--ghost {
+    background: rgba(251, 248, 241, 0.08);
+    color: var(--cream);
+    border-color: rgba(251, 248, 241, 0.34);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
+  .btn--ghost:hover { background: rgba(251, 248, 241, 0.17); }
+
+  .btn--outline { background: transparent; color: var(--ink); border-color: var(--line-2); }
+  .btn--outline:hover { background: rgba(27, 42, 34, 0.05); }
+
+  .btn--cream { background: var(--cream); color: var(--ink); }
+  .btn--cream:hover { background: #fff; }
+
+  .text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    font-weight: 500;
+    border-bottom: 1px solid var(--line-2);
+    padding-bottom: 3px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .text-link svg { width: 15px; height: 15px; transition: transform 0.2s; }
+  .text-link:hover { color: var(--clay); border-color: var(--clay); }
+  .text-link:hover svg { transform: translateX(3px); }
+
+  /* ---------- шапка ---------- */
+
+  .hdr {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 90;
+    color: var(--cream);
+    border-bottom: 1px solid transparent;
+    transition: background 0.35s var(--ease), color 0.35s, border-color 0.35s;
+  }
+
+  .hdr::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(11, 23, 16, 0.5), rgba(11, 23, 16, 0));
+    transition: opacity 0.35s;
+    pointer-events: none;
+  }
+
+  .hdr.is-solid {
+    background: rgba(244, 241, 233, 0.88);
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    color: var(--ink);
+    border-color: var(--line);
+  }
+
+  .hdr.is-solid::before { opacity: 0; }
+
+  .hdr__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    height: 74px;
+  }
+
+  .brand { display: inline-flex; align-items: center; gap: 10px; flex: none; }
+
+  .brand__mark { width: 32px; height: 32px; }
+  .brand__mark svg { width: 100%; height: 100%; }
+
+  .brand__text {
+    display: flex;
+    flex-direction: column;
+    font-size: 11.5px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    line-height: 1.1;
+  }
+
+  .brand__text small {
+    margin-top: 3px;
+    font-size: 8px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    opacity: 0.6;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(14px, 2vw, 28px);
+    margin-left: auto;
+  }
+
+  .nav a {
+    position: relative;
+    font-size: 13px;
+    font-weight: 500;
+    opacity: 0.75;
+    transition: opacity 0.2s;
+  }
+
+  .nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: -6px;
+    height: 1px;
+    background: currentColor;
+    transition: right 0.28s var(--ease);
+  }
+
+  .nav a:hover, .nav a.is-active { opacity: 1; }
+  .nav a:hover::after, .nav a.is-active::after { right: 0; }
+
+  .hdr__cta { display: flex; align-items: center; gap: 8px; flex: none; }
+
+  .hdr .btn--ghost { min-height: 40px; font-size: 13px; }
+  .hdr.is-solid .btn--ghost { background: transparent; color: var(--ink); border-color: var(--line-2); }
+  .hdr.is-solid .btn--ghost:hover { background: rgba(27, 42, 34, 0.06); }
+
+  .burger {
+    display: none;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(251, 248, 241, 0.3);
+    border-radius: 50%;
+    background: transparent;
+    color: inherit;
+    padding: 0;
+    position: relative;
+  }
+  .hdr.is-solid .burger { border-color: var(--line-2); }
+  .burger span {
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    height: 1.4px;
+    background: currentColor;
+  }
+  .burger span:first-child { top: 17px; }
+  .burger span:last-child { bottom: 17px; }
+
+  /* ---------- hero ---------- */
+
+  .hero {
+    position: relative;
+    min-height: 86svh;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    background: #14221a;
+    color: var(--cream);
+  }
+
+  .hero__media, .hero__shade { position: absolute; inset: 0; }
+
+  .hero__video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 45%;
+  }
+
+  .hero__shade {
+    background:
+      linear-gradient(90deg, rgba(10, 22, 15, 0.84) 0%, rgba(10, 22, 15, 0.56) 36%, rgba(10, 22, 15, 0.1) 72%, rgba(10, 22, 15, 0.18) 100%),
+      linear-gradient(0deg, rgba(10, 22, 15, 0.78) 0%, rgba(10, 22, 15, 0.12) 44%, rgba(10, 22, 15, 0.3) 100%);
+  }
+
+  .hero__inner {
+    position: relative;
+    z-index: 2;
+    width: min(1160px, calc(100% - 56px));
+    margin-inline: auto;
+    padding: 118px 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 86svh;
+  }
+
+  .hero__copy { max-width: 720px; margin-top: auto; }
+
+  .hero__kicker {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    color: rgba(251, 248, 241, 0.7);
+  }
+
+  .hero__kicker::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+    background: #d9a48a;
+  }
+
+  .hero__title {
+    margin: 18px 0 20px;
+    font-family: var(--serif);
+    font-size: clamp(2.4rem, 5.6vw, 5rem);
+    font-weight: 400;
+    line-height: 0.99;
+    letter-spacing: -0.035em;
+    max-width: 13ch;
+    text-wrap: balance;
+  }
+
+  .hero__title em { font-style: italic; color: #e8c9b7; }
+
+  .hero__lead {
+    max-width: 460px;
+    font-size: clamp(14px, 1.2vw, 16.5px);
+    line-height: 1.62;
+    color: rgba(251, 248, 241, 0.78);
+  }
+
+  .hero__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+
+  .hero__foot {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) auto;
+    align-items: end;
+    gap: clamp(14px, 3vw, 36px);
+    margin-top: clamp(30px, 5vh, 52px);
+    padding-top: 16px;
+    border-top: 1px solid rgba(251, 248, 241, 0.18);
+  }
+
+  .hero__stat b {
+    display: block;
+    font-family: var(--serif);
+    font-size: clamp(1.35rem, 2.2vw, 2rem);
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .hero__stat span {
+    display: block;
+    margin-top: 6px;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: rgba(251, 248, 241, 0.5);
+  }
+
+  .hero__scroll {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 9.5px;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: rgba(251, 248, 241, 0.55);
+  }
+
+  .hero__scroll i {
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(251, 248, 241, 0.24);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-style: normal;
+  }
+
+  .hero__scroll svg { width: 13px; height: 13px; animation: nudge 2.2s infinite; }
+
+  @keyframes nudge {
+    0%, 100% { transform: translateY(-2px); }
+    50% { transform: translateY(2px); }
+  }
+
+  /* ---------- секции ---------- */
+
+  .section { padding: clamp(56px, 7vw, 92px) 0; }
+  .section--paper { background: var(--paper-2); }
+
+  .section-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 22px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    margin-bottom: clamp(26px, 3.6vw, 40px);
+    flex-wrap: wrap;
+  }
+
+  .section-head h2 {
+    margin-top: 12px;
+    font-family: var(--serif);
+    font-size: clamp(1.8rem, 3.6vw, 2.9rem);
+    font-weight: 400;
+    line-height: 1.06;
+    letter-spacing: -0.026em;
+    max-width: 15ch;
+  }
+
+  .section-head h2 em { font-style: italic; color: var(--clay); }
+
+  .section-head p {
+    max-width: 340px;
+    font-size: 13.5px;
+    line-height: 1.62;
+    color: var(--muted);
+  }
+
+  /* о нас */
+
+  .about {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: clamp(30px, 6vw, 80px);
+    align-items: start;
+  }
+
+  .about__lead {
+    font-family: var(--serif);
+    font-size: clamp(1.5rem, 3vw, 2.6rem);
+    line-height: 1.16;
+    letter-spacing: -0.024em;
+    max-width: 17ch;
+  }
+
+  .about__lead em { font-style: italic; color: var(--clay); }
+
+  .about__text {
+    margin-top: 22px;
+    max-width: 440px;
+    display: grid;
+    gap: 12px;
+    font-size: 14.5px;
+    line-height: 1.68;
+    color: var(--ink-2);
+  }
+
+  .about__sign {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-top: 26px;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  .about__sign svg { width: 17px; height: 17px; color: var(--clay); flex: none; }
+  .about__sign b { color: var(--ink); font-weight: 500; }
+
+  .about__list { border-top: 1px solid var(--line); }
+
+  .about__row {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    gap: 14px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .about__row i {
+    font-style: normal;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    padding-top: 5px;
+  }
+
+  .about__row h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 400; line-height: 1.22; }
+  .about__row p { margin-top: 6px; font-size: 13.5px; line-height: 1.6; color: var(--muted); max-width: 380px; }
+
+  /* направления */
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .card {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    overflow: hidden;
+    transition: transform 0.32s var(--ease), box-shadow 0.32s var(--ease), border-color 0.32s;
+  }
+
+  .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: transparent; }
+
+  .card__media { position: relative; aspect-ratio: 16 / 10; overflow: hidden; background: var(--paper-2); }
+
+  .card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s var(--ease);
+  }
+
+  .card:hover .card__media img { transform: scale(1.05); }
+
+  .card__tag {
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    padding: 5px 9px;
+    border-radius: 999px;
+    background: rgba(16, 30, 22, 0.5);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    color: rgba(251, 248, 241, 0.92);
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .card__body { padding: 15px 16px 17px; display: flex; flex-direction: column; gap: 7px; }
+
+  .card__body h3 { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; line-height: 1.24; letter-spacing: -0.012em; }
+
+  .card__body p { font-size: 12.5px; line-height: 1.58; color: var(--muted); }
+
+  /* как начать */
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border-top: 1px solid var(--line);
+  }
+
+  .step {
+    padding: 22px clamp(16px, 2.6vw, 32px) 4px 0;
+    border-right: 1px solid var(--line);
+  }
+
+  .step:last-child { border-right: 0; padding-right: 0; }
+
+  .step i {
+    font-style: italic;
+    font-family: var(--serif);
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--clay);
+  }
+
+  .step h3 { margin-top: 16px; font-family: var(--serif); font-size: 1.25rem; font-weight: 400; }
+  .step p { margin-top: 7px; font-size: 13px; line-height: 1.62; color: var(--muted); max-width: 260px; }
+
+  /* цитата */
+
+  .quote {
+    position: relative;
+    overflow: hidden;
+    background: var(--forest);
+    color: var(--cream);
+    border-radius: 22px;
+    padding: clamp(26px, 4.5vw, 56px);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 26px;
+    align-items: end;
+  }
+
+  .quote::after {
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    right: -110px;
+    top: -150px;
+    border: 1px solid rgba(251, 248, 241, 0.13);
+    border-radius: 50%;
+    box-shadow: 0 0 0 60px rgba(251, 248, 241, 0.035), 0 0 0 120px rgba(251, 248, 241, 0.02);
+    pointer-events: none;
+  }
+
+  .quote__text {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    font-family: var(--serif);
+    font-size: clamp(1.45rem, 3vw, 2.5rem);
+    line-height: 1.2;
+    letter-spacing: -0.022em;
+  }
+
+  .quote__text em { font-style: italic; color: #d9a48a; }
+
+  .quote__side {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .quote__side p { max-width: 200px; font-size: 12.5px; line-height: 1.58; color: rgba(251, 248, 241, 0.55); }
+
+  /* контакты */
+
+  .contacts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .contact {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: border-color 0.25s, box-shadow 0.25s;
+  }
+
+  .contact:hover { border-color: var(--line-2); box-shadow: var(--shadow); }
+
+  .contact i {
+    font-style: normal;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--sage);
+    color: var(--forest);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact i svg { width: 16px; height: 16px; }
+
+  .contact span {
+    font-size: 9.5px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .contact b { font-family: var(--serif); font-size: 1.2rem; font-weight: 400; line-height: 1.3; overflow-wrap: anywhere; }
+
+  .contact p { font-size: 12.5px; line-height: 1.55; color: var(--muted); }
+
+  /* подвал */
+
+  .ftr {
+    background: var(--forest);
+    color: rgba(251, 248, 241, 0.68);
+    padding: clamp(40px, 5vw, 60px) 0 24px;
+  }
+
+  .ftr__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .ftr .brand__text { color: var(--cream); }
+
+  .ftr__note { max-width: 320px; font-size: 12.5px; line-height: 1.65; color: rgba(251, 248, 241, 0.5); }
+
+  .ftr__links { display: flex; gap: 18px; flex-wrap: wrap; font-size: 12.5px; }
+  .ftr__links a { transition: color 0.2s; }
+  .ftr__links a:hover { color: var(--cream); }
+
+  .ftr__bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: clamp(28px, 4vw, 44px);
+    padding-top: 16px;
+    border-top: 1px solid rgba(251, 248, 241, 0.12);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(251, 248, 241, 0.35);
+  }
+
+  /* мобильное меню */
+
+  .mmenu {
+    position: fixed;
+    inset: 0;
+    z-index: 150;
+    background: var(--paper);
+    color: var(--ink);
+    transform: translateY(-102%);
+    visibility: hidden;
+    transition: transform 0.42s var(--ease), visibility 0.42s;
+    display: flex;
+    flex-direction: column;
+    padding: 22px 0 max(22px, env(safe-area-inset-bottom));
+    overflow-y: auto;
+  }
+
+  .mmenu.is-open { transform: translateY(0); visibility: visible; }
+
+  .mmenu__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .icon-btn {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background: transparent;
+    color: inherit;
+    padding: 0;
+  }
+  .icon-btn svg { width: 19px; height: 19px; }
+  .icon-btn:hover { background: rgba(27, 42, 34, 0.06); }
+
+  .mmenu__nav { display: flex; flex-direction: column; flex: 1; padding-top: 14px; }
+
+  .mmenu__nav a {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding: 12px 0;
+    font-family: var(--serif);
+    font-size: clamp(1.6rem, 6.5vw, 2.2rem);
+    line-height: 1.1;
+    border-bottom: 1px solid var(--line);
+    transition: color 0.2s, padding-left 0.24s;
+  }
+
+  .mmenu__nav a i {
+    font-style: normal;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+  }
+
+  .mmenu__nav a:hover { color: var(--clay); padding-left: 5px; }
+
+  .mmenu__bottom { padding-top: 20px; display: grid; gap: 9px; }
+  .mmenu__bottom .btn { width: 100%; }
+
+  body.is-locked { overflow: hidden; }
+
+  /* появление блоков */
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.65s var(--ease), transform 0.65s var(--ease);
+  }
+
+  .reveal.is-in { opacity: 1; transform: none; }
+
+  /* ---------- адаптив ---------- */
+
+  @media (max-width: 1000px) {
+    .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .about { grid-template-columns: 1fr; gap: 34px; }
+    .about__lead { max-width: 20ch; }
+  }
+
+  @media (max-width: 860px) {
+    .shell { width: calc(100% - 40px); }
+    .hero__inner { width: calc(100% - 40px); padding-top: 104px; }
+    .nav, .hdr__cta .btn { display: none; }
+    .burger { display: block; }
+    .hdr__cta { margin-left: auto; }
+    .steps { grid-template-columns: 1fr; }
+    .step { border-right: 0; border-top: 1px solid var(--line); padding: 20px 0; }
+    .step p { max-width: none; }
+    .quote { grid-template-columns: 1fr; }
+    .quote__side { flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+    .contacts { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 700px) {
+    .shell { width: calc(100% - 32px); }
+    .hero { min-height: 88svh; }
+    .hero__inner { width: calc(100% - 32px); min-height: auto; padding: 96px 0 22px; }
+    .hero__title { font-size: clamp(2.2rem, 10.4vw, 3.2rem); margin: 16px 0 16px; max-width: 12ch; }
+    .hero__lead { font-size: 13.5px; max-width: 380px; }
+    .hero__actions { margin-top: 22px; gap: 8px; }
+    .hero__actions .btn { flex: 1 1 100%; }
+    .hero__foot { grid-template-columns: repeat(3, 1fr); margin-top: 26px; padding-top: 13px; gap: 10px; }
+    .hero__foot .hero__scroll { display: none; }
+    .hero__stat b { font-size: 1.15rem; }
+    .hero__stat span { font-size: 7px; letter-spacing: 0.08em; }
+    .section { padding: 46px 0; }
+    .cards { grid-template-columns: 1fr; }
+    .contacts { grid-template-columns: 1fr; }
+    .hdr__inner { height: 64px; }
+    .brand__text { font-size: 10.5px; letter-spacing: 0.15em; }
+    .brand__text small { font-size: 7px; }
+    .brand__mark { width: 29px; height: 29px; }
+    .ftr__bottom { flex-direction: column; gap: 6px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hdr" id="hdr">
+  <div class="hdr__inner shell">
+    <a class="brand" href="#top" aria-label="Отдел по работе с молодежью — наверх">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M20 29V16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M20 20.5c0-5 3.5-8.5 8-8.5 0 4.8-3.2 8.5-8 8.5Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+          <path d="M20 24.5c0-4-2.8-6.8-6.5-6.8 0 3.8 2.6 6.8 6.5 6.8Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="brand__text">МОЛОДЕЖЬ<small>отдел по работе</small></span>
+    </a>
+
+    <nav class="nav" aria-label="Разделы">
+      <a href="#about">О нас</a>
+      <a href="#directions">Направления</a>
+      <a href="#how">Как начать</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+
+    <div class="hdr__cta">
+      <!-- Замените ссылку на свой Telegram-чат -->
+      <a class="btn btn--ghost tg-link" href="https://t.me/joinchat" target="_blank" rel="noopener">
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10l14-6-4 13-3-5-7-2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+        <span>Стать волонтером</span>
+      </a>
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mmenu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mmenu" id="mmenu" aria-hidden="true">
+  <div class="mmenu__top shell">
+    <span class="eyebrow">Меню</span>
+    <button class="icon-btn" type="button" id="closeMenu" aria-label="Закрыть меню">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M5 5l14 14M19 5L5 19" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <nav class="mmenu__nav shell" aria-label="Мобильная навигация">
+    <a href="#about"><i>01</i>О нас</a>
+    <a href="#directions"><i>02</i>Направления</a>
+    <a href="#how"><i>03</i>Как начать</a>
+    <a href="#contacts"><i>04</i>Контакты</a>
+  </nav>
+  <div class="mmenu__bottom shell">
+    <!-- Замените ссылку на свой Telegram-чат -->
+    <a class="btn btn--clay tg-link" href="https://t.me/joinchat" target="_blank" rel="noopener">
+      <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10l14-6-4 13-3-5-7-2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+      <span>Стать волонтером</span>
+    </a>
+    <a class="btn btn--outline" href="mailto:hello@molodezh.ru">Написать письмо</a>
+  </div>
+</div>
+
+<main id="top">
+
+  <!-- ШАПКА С ВИДЕО -->
+  <section class="hero">
+    <div class="hero__media">
+      <video class="hero__video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+        <source src="img/shapka.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="hero__shade"></div>
+
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <p class="hero__kicker">Добровольчество · Молодежные проекты</p>
+        <h1 class="hero__title">Отдел по работе<br><em>с молодежью</em></h1>
+        <p class="hero__lead">Собираем тех, кому не все равно: субботники, помощь, фестивали и обучение. Без пафоса — просто рядом.</p>
+        <div class="hero__actions">
+          <!-- Замените ссылку на свой Telegram-чат -->
+          <a class="btn btn--clay tg-link" href="https://t.me/joinchat" target="_blank" rel="noopener">
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10l14-6-4 13-3-5-7-2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+            <span>Стать волонтером</span>
+          </a>
+          <a class="btn btn--ghost" href="#directions">Наши направления</a>
+        </div>
+      </div>
+
+      <div class="hero__foot">
+        <div class="hero__stat"><b>300+</b><span>волонтеров</span></div>
+        <div class="hero__stat"><b>6</b><span>направлений</span></div>
+        <div class="hero__stat"><b>12 лет</b><span>в городе</span></div>
+        <span class="hero__scroll">Листайте<i><svg viewBox="0 0 20 20" fill="none"><path d="M5 8l5 5 5-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></i></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- О НАС -->
+  <section class="section" id="about">
+    <div class="shell">
+      <div class="about">
+        <div class="reveal">
+          <p class="eyebrow">01 — Кто мы</p>
+          <p class="about__lead">Волонтерство — это <em>привычка быть рядом</em>, а не разовая акция.</p>
+          <div class="about__text">
+            <p>Отдел по работе с молодежью координирует городские события, помогает новичкам найти свое дело и поддерживает тех, кто уже давно в команде.</p>
+            <p>Не нужен опыт и свободная неделя — достаточно желания и пары часов в месяц.</p>
+          </div>
+          <div class="about__sign">
+            <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2.5c.6 4.7 2.8 6.9 7.5 7.5-4.7.6-6.9 2.8-7.5 7.5-.6-4.7-2.8-6.9-7.5-7.5 4.7-.6 6.9-2.8 7.5-7.5Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>
+            <span><b>Отдел по работе с молодежью</b> · молодежный центр, ул. Седова, 98</span>
+          </div>
+        </div>
+
+        <div class="about__list reveal">
+          <div class="about__row">
+            <i>01</i>
+            <div>
+              <h3>События</h3>
+              <p>Форумы, фестивали, городские праздники и выездные акции. Приходите один раз — дальше позовут сами.</p>
+            </div>
+          </div>
+          <div class="about__row">
+            <i>02</i>
+            <div>
+              <h3>Адресная помощь</h3>
+              <p>Сборы продуктовых наборов, работа с приютами и помощь тем, кто рядом: соседям, семьям, пожилым людям.</p>
+            </div>
+          </div>
+          <div class="about__row">
+            <i>03</i>
+            <div>
+              <h3>Обучение</h3>
+              <p>Короткие мастер-классы, наставники и разборы реальных кейсов. Учимся помогать бережно.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- НАПРАВЛЕНИЯ -->
+  <section class="section section--paper" id="directions">
+    <div class="shell">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">02 — Направления</p>
+          <h2>Выберите <em>свое</em></h2>
+        </div>
+        <p>Шесть направлений — от экологии до медиа. Можно участвовать в одном, можно пробовать всё.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="img/cover-eco.svg" alt="Экология" loading="lazy">
+            <span class="card__tag">Экология</span>
+          </div>
+          <div class="card__body">
+            <h3>Город, который дышит</h3>
+            <p>Субботники, высадка деревьев, раздельный сбор и уборка набережных.</p>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="img/cover-help.svg" alt="Помощь" loading="lazy">
+            <span class="card__tag">Помощь</span>
+          </div>
+          <div class="card__body">
+            <h3>Рядом во время</h3>
+            <p>Продуктовые наборы, приюты, поздравления и помощь пожилым людям.</p>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="img/cover-culture.svg" alt="Культура" loading="lazy">
+            <span class="card__tag">Культура</span>
+          </div>
+          <div class="card__body">
+            <h3>Город звучит</h3>
+            <p>Фестивали, концерты и выставки: встречаем гостей и держим площадку.</p>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="img/cover-edu.svg" alt="Образование" loading="lazy">
+            <span class="card__tag">Образование</span>
+          </div>
+          <div class="card__body">
+            <h3>Учимся добру</h3>
+            <p>Лекции, тренинги первой помощи и экскурсии для школьников.</p>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="img/cover-sport.svg" alt="Спорт" loading="lazy">
+            <span class="card__tag">Спорт</span>
+          </div>
+          <div class="card__body">
+            <h3>Движение объединяет</h3>
+            <p>Забегы, турниры и массовые зарядки — на трассе и на пунктах питания.</p>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="card__media">
+            <img src="img/cover-forum.svg" alt="Медиа" loading="lazy">
+            <span class="card__tag">Медиа</span>
+          </div>
+          <div class="card__body">
+            <h3>Истории города</h3>
+            <p>Фотоохоты, видеосъемка событий и ведение наших соцсетей.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- КАК НАЧАТЬ -->
+  <section class="section" id="how">
+    <div class="shell">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">03 — Как начать</p>
+          <h2>Три шага, чтобы <em>быть рядом</em></h2>
+        </div>
+        <p>Никаких длинных анкет и сложных отборов. Вы сами выбираете темп и нагрузку.</p>
+      </div>
+
+      <div class="steps reveal">
+        <div class="step">
+          <i>01</i>
+          <h3>Напишите нам</h3>
+          <p>Загляните в Telegram-чат отдела и расскажите, что вам ближе.</p>
+        </div>
+        <div class="step">
+          <i>02</i>
+          <h3>Приходите на событие</h3>
+          <p>Координатор встретит, все покажет и объяснит прямо на месте.</p>
+        </div>
+        <div class="step">
+          <i>03</i>
+          <h3>Оставайтесь в команде</h3>
+          <p>Дальше — свои проекты, наставник и люди, с которыми не скучно.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:clamp(28px,4vw,44px)">
+        <div class="quote reveal">
+          <p class="quote__text">У добра есть расписание. <em>Выберите свое.</em></p>
+          <div class="quote__side">
+            <p>Ближайшие акции — в нашем Telegram-чате. Записаться можно за минуту.</p>
+            <a class="btn btn--cream tg-link" href="https://t.me/joinchat" target="_blank" rel="noopener">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 10l14-6-4 13-3-5-7-2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg>
+              <span>Стать волонтером</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- КОНТАКТЫ -->
+  <section class="section section--paper" id="contacts">
+    <div class="shell">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">04 — Контакты</p>
+          <h2>Свяжитесь <em>с нами</em></h2>
+        </div>
+        <p>Пишите по любым вопросам: от «хочу помочь» до «хочу провести событие вместе с вами».</p>
+      </div>
+
+      <div class="contacts">
+        <a class="contact reveal tg-link" href="https://t.me/joinchat" target="_blank" rel="noopener">
+          <i><svg viewBox="0 0 20 20" fill="none"><path d="M3 10l14-6-4 13-3-5-7-2Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></i>
+          <span>Telegram-чат</span>
+          <b>Все новости и записи</b>
+          <p>Главный способ связаться: анонсы, ответы координатора и живой чат волонтеров.</p>
+        </a>
+
+        <a class="contact reveal" href="mailto:hello@molodezh.ru">
+          <i><svg viewBox="0 0 20 20" fill="none"><rect x="3" y="5" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.3"/><path d="M4 7l6 4 6-4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg></i>
+          <span>Почта</span>
+          <b>hello@molodezh.ru</b>
+          <p>Для писем, проектов и официальных обращений в отдел.</p>
+        </a>
+
+        <div class="contact reveal">
+          <i><svg viewBox="0 0 20 20" fill="none"><path d="M10 17s5.2-4.4 5.2-8.2A5.2 5.2 0 0010 3.5a5.2 5.2 0 00-5.2 5.3C4.8 12.6 10 17 10 17Z" stroke="currentColor" stroke-width="1.3"/><circle cx="10" cy="8.7" r="1.8" stroke="currentColor" stroke-width="1.3"/></svg></i>
+          <span>Адрес</span>
+          <b>ул. Седова, 98</b>
+          <p>Молодежный центр, кабинет №3. Пн–пт, 10:00–19:00.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:26px">
+        <a class="text-link" href="#top">Наверх <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 16V4M5 9l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ftr">
+  <div class="shell">
+    <div class="ftr__top">
+      <div>
+        <a class="brand" href="#top" aria-label="Наверх">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 40 40" fill="none">
+              <circle cx="20" cy="20" r="18.5" stroke="currentColor" stroke-width="1.2"/>
+              <path d="M20 29V16" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              <path d="M20 20.5c0-5 3.5-8.5 8-8.5 0 4.8-3.2 8.5-8 8.5Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+              <path d="M20 24.5c0-4-2.8-6.8-6.5-6.8 0 3.8 2.6 6.8 6.5 6.8Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="brand__text">МОЛОДЕЖЬ<small>отдел по работе</small></span>
+        </a>
+        <p class="ftr__note">Помогаем молодым людям находить свое дело и делать город лучше.</p>
+      </div>
+
+      <div class="ftr__links">
+        <a href="#about">О нас</a>
+        <a href="#directions">Направления</a>
+        <a href="#how">Как начать</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+    </div>
+
+    <div class="ftr__bottom">
+      <span>© 2026 Отдел по работе с молодежью</span>
+      <span>Добровольчество · Молодежные проекты</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Ссылка на Telegram-чат: вставьте сюда свою — обновятся все кнопки.
+  const TELEGRAM_LINK = 'https://t.me/joinchat';
+  document.querySelectorAll('.tg-link').forEach((a) => { a.href = TELEGRAM_LINK; });
+
+  const hdr = document.getElementById('hdr');
+  const updateHdr = () => hdr.classList.toggle('is-solid', window.scrollY > 24);
+  window.addEventListener('scroll', updateHdr, { passive: true });
+  updateHdr();
+
+  const menu = document.getElementById('mmenu');
+  const burger = document.getElementById('burger');
+
+  const openMenu = () => {
+    menu.classList.add('is-open');
+    menu.setAttribute('aria-hidden', 'false');
+    burger.setAttribute('aria-expanded', 'true');
+    document.body.classList.add('is-locked');
+  };
+
+  const closeMenu = () => {
+    menu.classList.remove('is-open');
+    menu.setAttribute('aria-hidden', 'true');
+    burger.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('is-locked');
+  };
+
+  burger.addEventListener('click', () => (menu.classList.contains('is-open') ? closeMenu() : openMenu()));
+  document.getElementById('closeMenu').addEventListener('click', closeMenu);
+  menu.querySelectorAll('a').forEach((a) => a.addEventListener('click', closeMenu));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && menu.classList.contains('is-open')) closeMenu(); });
+
+  const video = document.querySelector('.hero__video');
+  if (video) video.play().catch(() => {});
+
+  const links = [...document.querySelectorAll('.nav a')];
+  const sections = links.map((a) => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      links.forEach((a) => a.classList.toggle('is-active', a.getAttribute('href') === '#' + entry.target.id));
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  sections.forEach((s) => spy.observe(s));
+
+  const reveal = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-in');
+        reveal.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach((el) => reveal.observe(el));
+</script>
+
+</body>
+</html>
